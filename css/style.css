@@ -876,7 +876,7 @@ footer{
 .noticia1 {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
-  width: 430px;
+  width: 370px;
   height: 300px;
   z-index: 0;
 }
@@ -884,7 +884,7 @@ footer{
 .noticia2 {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
-  width: 430px;
+  width: 370px;
   height: 300px;
   z-index: 0;
 }
@@ -892,7 +892,7 @@ footer{
 .noticia3 {
   grid-row: 3 / 4;
   grid-column: 1 / 2;
-  width: 430px;
+  width: 370px;
   height: 300px;
   z-index: 0;
 }
@@ -900,7 +900,7 @@ footer{
 .noticia4 {
   grid-row: 4 / 5;
   grid-column: 1 / 2;
-  width: 430px;
+  width: 370px;
   height: 300px;
   z-index: 0;
 }
@@ -908,7 +908,7 @@ footer{
 .noticia5 {
   grid-row: 5 / 6;
   grid-column: 1 / 2;
-  width: 430px;
+  width: 370px;
   height: 300px;
   z-index: 0;
 }
@@ -916,7 +916,7 @@ footer{
 .noticia6 {
   grid-row: 6 / 7;
   grid-column: 1 / 2;
-  width: 430px;
+  width: 370px;
   height: 300px;
   z-index: 0;
 }
@@ -1191,7 +1191,7 @@ footer{
 .noticia1 {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
-  width: 430px;
+  width: 370px;
   height: 300px;
   z-index: 0;
 }
@@ -1199,7 +1199,7 @@ footer{
 .noticia2 {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
-  width: 430px;
+  width: 370px;
   height: 300px;
   z-index: 0;
 }
@@ -1207,7 +1207,7 @@ footer{
 .noticia3 {
   grid-row: 3 / 4;
   grid-column: 1 / 2;
-  width: 430px;
+  width: 370px;
   height: 300px;
   z-index: 0;
 }
@@ -1215,7 +1215,7 @@ footer{
 .noticia4 {
   grid-row: 4 / 5;
   grid-column: 1 / 2;
-  width: 430px;
+  width: 370px;
   height: 300px;
   z-index: 0;
 }
@@ -1223,7 +1223,7 @@ footer{
 .noticia5 {
   grid-row: 5 / 6;
   grid-column: 1 / 2;
-  width: 430px;
+  width: 370px;
   height: 300px;
   z-index: 0;
 }
@@ -1231,7 +1231,7 @@ footer{
 .noticia6 {
   grid-row: 6 / 7;
   grid-column: 1 / 2;
-  width: 430px;
+  width: 370px;
   height: 300px;
   z-index: 0;
 }

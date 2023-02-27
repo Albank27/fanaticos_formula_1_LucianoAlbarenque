@@ -1,0 +1,13 @@
+@media (min-width: 992px) {
+    .cabecera{
+        flex-direction: row;
+    }
+    .main {
+      flex-direction: column;
+    }
+    .footer{
+        flex-direction: row;
+        
+    }
+  
+  }

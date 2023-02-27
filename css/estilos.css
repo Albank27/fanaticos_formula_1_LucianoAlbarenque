@@ -1,522 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 /*Crear Variables*/
-@media (max-width: 767px) {
-  .cabecera {
-    flex-direction: column; }
-  .main {
-    flex-direction: column; }
-  .footer {
-    flex-direction: column; }
-  .carousel {
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    overflow: hidden;
-    margin-bottom: 50px;
-    margin-top: 50px; }
-  .carousel-image {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover; }
-  .text-overlay {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.747);
-    color: white;
-    font-weight: bold;
-    width: 100%;
-    height: 50vh;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  table {
-    width: 100%;
-    /* Asegura que la tabla ocupe todo el ancho disponible */
-    border-collapse: collapse;
-    /* Elimina los bordes entre las celdas */ }
-  .driver-list {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, auto); }
-  .driver-card img {
-    width: 60%;
-    height: 100%;
-    object-fit: contain;
-    float: left; }
-  .driver-info {
-    width: 40%;
-    padding: 10px;
-    background-color: rgba(241, 25, 25, 0.856);
-    color: #fff;
-    float: right;
-    text-align: left; }
-  .driver-info h2 {
-    font-size: 12px;
-    margin-bottom: 10px; }
-  .driver-info p {
-    font-size: 12px; }
-  form {
-    width: 300px;
-    margin: 20px;
-    border-radius: 10px;
-    background-color: #f5f5f5;
-    padding: 20px;
-    background-color: #333;
-    box-shadow: 10px 10px 10px #333; }
-  .titulocontacto {
-    font-size: 20px;
-    font-weight: bold;
-    color: rgba(241, 21, 21, 0.863); }
-  .paisesca {
-    width: 40px;
-    height: 50px; }
-  .navegacion {
-    display: flex;
-    font-size: 13px; }
-  .boton-whatsapp img {
-    width: 8%;
-    height: 4%;
-    position: fixed;
-    bottom: 10px;
-    right: 6%;
-    z-index: 1; }
-  .redes {
-    background-color: rgba(105, 104, 104, 0.445);
-    height: 100px; }
-  .descargaapp {
-    text-align: left;
-    -moz-text-size-adjust: auto;
-    color: white;
-    font-weight: bold;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    z-index: 1; }
-  .android {
-    width: 80px;
-    height: 35px;
-    position: absolute;
-    top: 5px;
-    left: 120px;
-    z-index: 1; }
-  .ios {
-    width: 80px;
-    height: 35px;
-    position: absolute;
-    top: 5px;
-    left: 210px;
-    z-index: 1; }
-  .insta {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 60px;
-    left: 5px;
-    z-index: 1; }
-  .face {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 60px;
-    left: 40px;
-    z-index: 1; }
-  .spoty {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 60px;
-    left: 75px;
-    z-index: 1; }
-  .youtube {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 60px;
-    left: 110px;
-    z-index: 1; }
-  .linkedin {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    top: 60px;
-    left: 140px;
-    z-index: 1; }
-  .formula1logo img {
-    width: 15%;
-    height: 25%;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    z-index: 1; }
-  .derechos {
-    position: absolute;
-    z-index: 1;
-    color: white;
-    left: 16vw;
-    bottom: 0px;
-    font-size: 10px; }
-  footer {
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    text-align: center;
-    background-color: #131111;
-    width: 100%;
-    height: 25vh; }
-  .equipo-list {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    margin-top: 50px;
-    z-index: 0; }
-  .equipo-card {
-    display: flex;
-    width: 90%;
-    height: 300px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(51, 50, 50, 0.39);
-    overflow: hidden;
-    margin: 30px;
-    position: relative;
-    z-index: 0; }
-  .equipo-card img {
-    width: 30%;
-    height: 100%;
-    object-fit: cover;
-    float: left; }
-  .equipo-info {
-    width: 20%;
-    padding: 10px;
-    background-color: rgba(241, 25, 25, 0.856);
-    color: #fff;
-    float: right;
-    text-align: left; }
-  .equipo-info h2 {
-    font-size: 20px;
-    margin-bottom: 10px; }
-  .equipo-info p {
-    font-size: 10px; }
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    grid-gap: 5px;
-    margin: 15px;
-    margin-top: 60px; }
-  .noticia {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: rgba(241, 21, 21, 0.863);
-    border-radius: 5px; }
-  .noticia p {
-    color: #fff;
-    font-weight: bold; }
-  .noticia1 {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    width: 350px;
-    height: 300px;
-    z-index: 0; }
-  .noticia2 {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    width: 350px;
-    height: 300px;
-    z-index: 0; }
-  .noticia3 {
-    grid-row: 3 / 4;
-    grid-column: 1 / 2;
-    width: 350px;
-    height: 300px;
-    z-index: 0; }
-  .noticia4 {
-    grid-row: 4 / 5;
-    grid-column: 1 / 2;
-    width: 350px;
-    height: 300px;
-    z-index: 0; }
-  .noticia5 {
-    grid-row: 5 / 6;
-    grid-column: 1 / 2;
-    width: 350px;
-    height: 300px;
-    z-index: 0; }
-  .noticia6 {
-    grid-row: 6 / 7;
-    grid-column: 1 / 2;
-    width: 350px;
-    height: 300px;
-    z-index: 0; } }
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .cabecera {
-    flex-direction: column; }
-  .main {
-    flex-direction: column; }
-  .footer {
-    flex-direction: column; }
-  .carousel {
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    overflow: hidden;
-    margin-bottom: 50px;
-    margin-top: 50px; }
-  .carousel-image {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover; }
-  .text-overlay {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.747);
-    color: white;
-    font-weight: bold;
-    width: 100%;
-    height: 50vh;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  table {
-    width: 100%;
-    /* Asegura que la tabla ocupe todo el ancho disponible */
-    border-collapse: collapse;
-    /* Elimina los bordes entre las celdas */ }
-  .driver-list {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, auto); }
-  .driver-card img {
-    width: 60%;
-    height: 100%;
-    object-fit: contain;
-    float: left; }
-  .driver-info {
-    width: 40%;
-    padding: 10px;
-    background-color: rgba(241, 25, 25, 0.856);
-    color: #fff;
-    float: right;
-    text-align: left; }
-  .driver-info h2 {
-    font-size: 12px;
-    margin-bottom: 10px; }
-  .driver-info p {
-    font-size: 12px; }
-  form {
-    width: 350px;
-    margin: 20px;
-    border-radius: 10px;
-    background-color: #f5f5f5;
-    padding: 20px;
-    background-color: #333;
-    box-shadow: 10px 10px 10px #333; }
-  .titulocontacto {
-    font-size: 20px;
-    font-weight: bold;
-    color: rgba(241, 21, 21, 0.863); }
-  .paisesca {
-    width: 40px;
-    height: 50px; }
-  .navegacion {
-    display: flex;
-    font-size: 13px; }
-  .boton-whatsapp img {
-    width: 8%;
-    height: 4%;
-    position: fixed;
-    bottom: 10px;
-    right: 1%;
-    z-index: 1; }
-  .redes {
-    background-color: rgba(105, 104, 104, 0.445);
-    height: 100px; }
-  .descargaapp {
-    text-align: left;
-    -moz-text-size-adjust: auto;
-    color: white;
-    font-weight: bold;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    z-index: 1; }
-  .android {
-    width: 80px;
-    height: 35px;
-    position: absolute;
-    top: 5px;
-    left: 120px;
-    z-index: 1; }
-  .ios {
-    width: 80px;
-    height: 35px;
-    position: absolute;
-    top: 5px;
-    left: 210px;
-    z-index: 1; }
-  .insta {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 60px;
-    left: 5px;
-    z-index: 1; }
-  .face {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 60px;
-    left: 40px;
-    z-index: 1; }
-  .spoty {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 60px;
-    left: 75px;
-    z-index: 1; }
-  .youtube {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 60px;
-    left: 110px;
-    z-index: 1; }
-  .linkedin {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    top: 60px;
-    left: 140px;
-    z-index: 1; }
-  .formula1logo img {
-    width: 15%;
-    height: 25%;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    z-index: 1; }
-  footer {
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    text-align: center;
-    background-color: #131111;
-    width: 100%;
-    height: 20vh; }
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, auto);
-    margin-top: 60px; }
-  .noticia {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: rgba(241, 21, 21, 0.863);
-    border-radius: 5px;
-    grid-row: auto; }
-  .equipo-list {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    margin-top: 50px;
-    z-index: 0; }
-  .equipo-card {
-    display: flex;
-    width: 90%;
-    height: 300px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(51, 50, 50, 0.39);
-    overflow: hidden;
-    margin: 30px;
-    position: relative;
-    z-index: 0; }
-  .equipo-card img {
-    width: 30%;
-    height: 100%;
-    object-fit: cover;
-    float: left; }
-  .equipo-info {
-    width: 20%;
-    padding: 10px;
-    background-color: rgba(241, 25, 25, 0.856);
-    color: #fff;
-    float: right;
-    text-align: left; }
-  .equipo-info h2 {
-    font-size: 20px;
-    margin-bottom: 10px; }
-  .equipo-info p {
-    font-size: 10px; }
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    grid-gap: 5px;
-    margin: 15px;
-    margin-top: 60px; }
-  .noticia {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: rgba(241, 21, 21, 0.863);
-    border-radius: 5px; }
-  .noticia p {
-    color: #fff;
-    font-weight: bold; }
-  .noticia1 {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    width: 350px;
-    height: 300px;
-    z-index: 0; }
-  .noticia2 {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    width: 350px;
-    height: 300px;
-    z-index: 0; }
-  .noticia3 {
-    grid-row: 3 / 4;
-    grid-column: 1 / 2;
-    width: 350px;
-    height: 300px;
-    z-index: 0; }
-  .noticia4 {
-    grid-row: 4 / 5;
-    grid-column: 1 / 2;
-    width: 350px;
-    height: 300px;
-    z-index: 0; }
-  .noticia5 {
-    grid-row: 5 / 6;
-    grid-column: 1 / 2;
-    width: 350px;
-    height: 300px;
-    z-index: 0; }
-  .noticia6 {
-    grid-row: 6 / 7;
-    grid-column: 1 / 2;
-    width: 350px;
-    height: 300px;
-    z-index: 0; } }
-
-@media (min-width: 992px) {
-  .cabecera {
-    flex-direction: row; }
-  .main {
-    flex-direction: column; }
-  .footer {
-    flex-direction: row; } }
-
 * {
   /*reset*/
   margin: 0;
@@ -1092,3 +576,529 @@ input[type="reset"] {
 
 .equipo-info p {
   font-size: 16px; }
+
+/*Formato para cada tipo de pantalla para que el mismo sea responsive*/
+/*Formato para cada tipo de pantalla para que el mismo sea responsive*/
+/*Formato para cada tipo de pantalla para que el mismo sea responsive*/
+/*Formato para cada tipo de pantalla para que el mismo sea responsive*/
+/*Formato para cada tipo de pantalla para que el mismo sea responsive*/
+/*Formato para cada tipo de pantalla para que el mismo sea responsive*/
+/*Formato para cada tipo de pantalla para que el mismo sea responsive*/
+/*Formato para cada tipo de pantalla para que el mismo sea responsive*/
+/*Formato para cada tipo de pantalla para que el mismo sea responsive*/
+/*Lo puse muchas veces para no perderme en el codigo y modificar los datos del responsive*/
+@media (max-width: 767px) {
+  .cabecera {
+    flex-direction: column; }
+  .main {
+    flex-direction: column; }
+  .footer {
+    flex-direction: column; }
+  .carousel {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 50px;
+    margin-top: 50px; }
+  .carousel-image {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover; }
+  .text-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.747);
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    height: 50vh;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  table {
+    width: 100%;
+    /* Asegura que la tabla ocupe todo el ancho disponible */
+    border-collapse: collapse;
+    /* Elimina los bordes entre las celdas */ }
+  .driver-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto); }
+  .driver-card img {
+    width: 60%;
+    height: 100%;
+    object-fit: contain;
+    float: left; }
+  .driver-info {
+    width: 40%;
+    padding: 10px;
+    background-color: rgba(241, 25, 25, 0.856);
+    color: #fff;
+    float: right;
+    text-align: left; }
+  .driver-info h2 {
+    font-size: 12px;
+    margin-bottom: 10px; }
+  .driver-info p {
+    font-size: 12px; }
+  form {
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    background-color: #333;
+    box-shadow: 10px 10px 10px #333; }
+  .titulocontacto {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(241, 21, 21, 0.863); }
+  .paisesca {
+    width: 40px;
+    height: 50px; }
+  .navegacion {
+    display: flex;
+    font-size: 13px; }
+  .boton-whatsapp img {
+    width: 8%;
+    height: 4%;
+    position: fixed;
+    bottom: 10px;
+    right: 6%;
+    z-index: 1; }
+  .redes {
+    background-color: rgba(105, 104, 104, 0.445);
+    height: 100px; }
+  .descargaapp {
+    text-align: left;
+    -moz-text-size-adjust: auto;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1; }
+  .android {
+    width: 80px;
+    height: 35px;
+    position: absolute;
+    top: 5px;
+    left: 120px;
+    z-index: 1; }
+  .ios {
+    width: 80px;
+    height: 35px;
+    position: absolute;
+    top: 5px;
+    left: 210px;
+    z-index: 1; }
+  .insta {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 60px;
+    left: 5px;
+    z-index: 1; }
+  .face {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 60px;
+    left: 40px;
+    z-index: 1; }
+  .spoty {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 60px;
+    left: 75px;
+    z-index: 1; }
+  .youtube {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 60px;
+    left: 110px;
+    z-index: 1; }
+  .linkedin {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 60px;
+    left: 140px;
+    z-index: 1; }
+  .formula1logo img {
+    width: 15%;
+    height: 25%;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1; }
+  .derechos {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    left: 16vw;
+    bottom: 0px;
+    font-size: 10px; }
+  footer {
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    text-align: center;
+    background-color: #131111;
+    width: 100%;
+    height: 25vh; }
+  .equipo-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    margin-top: 50px;
+    z-index: 0; }
+  .equipo-card {
+    display: flex;
+    width: 90%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(51, 50, 50, 0.39);
+    overflow: hidden;
+    margin: 30px;
+    position: relative;
+    z-index: 0; }
+  .equipo-card img {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    float: left; }
+  .equipo-info {
+    width: 20%;
+    padding: 10px;
+    background-color: rgba(241, 25, 25, 0.856);
+    color: #fff;
+    float: right;
+    text-align: left; }
+  .equipo-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px; }
+  .equipo-info p {
+    font-size: 10px; }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
+    margin: 15px;
+    margin-top: 60px; }
+  .noticia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(241, 21, 21, 0.863);
+    border-radius: 5px; }
+  .noticia p {
+    color: #fff;
+    font-weight: bold; }
+  .noticia1 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 350px;
+    height: 300px;
+    z-index: 0; }
+  .noticia2 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    width: 350px;
+    height: 300px;
+    z-index: 0; }
+  .noticia3 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    width: 350px;
+    height: 300px;
+    z-index: 0; }
+  .noticia4 {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    width: 350px;
+    height: 300px;
+    z-index: 0; }
+  .noticia5 {
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+    width: 350px;
+    height: 300px;
+    z-index: 0; }
+  .noticia6 {
+    grid-row: 6 / 7;
+    grid-column: 1 / 2;
+    width: 350px;
+    height: 300px;
+    z-index: 0; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .cabecera {
+    flex-direction: column; }
+  .main {
+    flex-direction: column; }
+  .footer {
+    flex-direction: column; }
+  .carousel {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 50px;
+    margin-top: 50px; }
+  .carousel-image {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover; }
+  .text-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.747);
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    height: 50vh;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  table {
+    width: 100%;
+    /* Asegura que la tabla ocupe todo el ancho disponible */
+    border-collapse: collapse;
+    /* Elimina los bordes entre las celdas */ }
+  .driver-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto); }
+  .driver-card img {
+    width: 60%;
+    height: 100%;
+    object-fit: contain;
+    float: left; }
+  .driver-info {
+    width: 40%;
+    padding: 10px;
+    background-color: rgba(241, 25, 25, 0.856);
+    color: #fff;
+    float: right;
+    text-align: left; }
+  .driver-info h2 {
+    font-size: 12px;
+    margin-bottom: 10px; }
+  .driver-info p {
+    font-size: 12px; }
+  form {
+    width: 350px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    background-color: #333;
+    box-shadow: 10px 10px 10px #333; }
+  .titulocontacto {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(241, 21, 21, 0.863); }
+  .paisesca {
+    width: 40px;
+    height: 50px; }
+  .navegacion {
+    display: flex;
+    font-size: 13px; }
+  .boton-whatsapp img {
+    width: 8%;
+    height: 4%;
+    position: fixed;
+    bottom: 10px;
+    right: 1%;
+    z-index: 1; }
+  .redes {
+    background-color: rgba(105, 104, 104, 0.445);
+    height: 100px; }
+  .descargaapp {
+    text-align: left;
+    -moz-text-size-adjust: auto;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1; }
+  .android {
+    width: 80px;
+    height: 35px;
+    position: absolute;
+    top: 5px;
+    left: 120px;
+    z-index: 1; }
+  .ios {
+    width: 80px;
+    height: 35px;
+    position: absolute;
+    top: 5px;
+    left: 210px;
+    z-index: 1; }
+  .insta {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 60px;
+    left: 5px;
+    z-index: 1; }
+  .face {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 60px;
+    left: 40px;
+    z-index: 1; }
+  .spoty {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 60px;
+    left: 75px;
+    z-index: 1; }
+  .youtube {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 60px;
+    left: 110px;
+    z-index: 1; }
+  .linkedin {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 60px;
+    left: 140px;
+    z-index: 1; }
+  .formula1logo img {
+    width: 15%;
+    height: 25%;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1; }
+  footer {
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    text-align: center;
+    background-color: #131111;
+    width: 100%;
+    height: 20vh; }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto);
+    margin-top: 60px; }
+  .noticia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(241, 21, 21, 0.863);
+    border-radius: 5px;
+    grid-row: auto; }
+  .equipo-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    margin-top: 50px;
+    z-index: 0; }
+  .equipo-card {
+    display: flex;
+    width: 90%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(51, 50, 50, 0.39);
+    overflow: hidden;
+    margin: 30px;
+    position: relative;
+    z-index: 0; }
+  .equipo-card img {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    float: left; }
+  .equipo-info {
+    width: 20%;
+    padding: 10px;
+    background-color: rgba(241, 25, 25, 0.856);
+    color: #fff;
+    float: right;
+    text-align: left; }
+  .equipo-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px; }
+  .equipo-info p {
+    font-size: 10px; }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
+    margin: 15px;
+    margin-top: 60px; }
+  .noticia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(241, 21, 21, 0.863);
+    border-radius: 5px; }
+  .noticia p {
+    color: #fff;
+    font-weight: bold; }
+  .noticia1 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 350px;
+    height: 300px;
+    z-index: 0; }
+  .noticia2 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    width: 350px;
+    height: 300px;
+    z-index: 0; }
+  .noticia3 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    width: 350px;
+    height: 300px;
+    z-index: 0; }
+  .noticia4 {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    width: 350px;
+    height: 300px;
+    z-index: 0; }
+  .noticia5 {
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+    width: 350px;
+    height: 300px;
+    z-index: 0; }
+  .noticia6 {
+    grid-row: 6 / 7;
+    grid-column: 1 / 2;
+    width: 350px;
+    height: 300px;
+    z-index: 0; } }
+
+@media (min-width: 992px) {
+  .cabecera {
+    flex-direction: row; }
+  .main {
+    flex-direction: column; }
+  .footer {
+    flex-direction: row; } }

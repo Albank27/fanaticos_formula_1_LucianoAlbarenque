@@ -1,0 +1,65 @@
+/*PAGINA HTML PILOTOS*//*PAGINA HTML PILOTOS*//*PAGINA HTML PILOTOS*//*PAGINA HTML PILOTOS*/
+
+.TituloPilotos {
+    text-align: left;
+    padding: 50px;
+  }
+  
+  .TituloPilotos h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgba(241, 21, 21, 0.863);
+  }
+  
+  .TituloPilotos p {
+    font-size: 18px;
+    color: gray;
+  }
+
+  .drivers-section {
+    background-color:rgb(255, 255, 255);
+  }
+      
+  .driver-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .driver-card {
+    display: flex;
+    width: 90%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(51, 50, 50, 0.39);
+    overflow: hidden;
+    margin: 30px;
+    position: relative;
+  }
+  
+  .driver-card img {
+    width: 70%;
+    height: 100%;
+    object-fit: contain;
+    float: left;
+  }
+  
+  .driver-info {
+    width: 30%;
+    padding: 10px;
+    background-color: rgba(241, 25, 25, 0.856);
+    color: #fff;
+    float: right;
+    text-align: left;
+  }
+  
+  .driver-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .driver-info p {
+    font-size: 16px;
+  }

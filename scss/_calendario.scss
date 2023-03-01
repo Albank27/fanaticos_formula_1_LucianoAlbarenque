@@ -1,0 +1,73 @@
+/*HTML CALENDARIO TABLE*//*HTML CALENDARIO TABLE*//*HTML CALENDARIO TABLE*/
+
+table {
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    border-collapse: collapse; /* Elimina los bordes entre las celdas */
+}
+
+/* Estilo para cada celda */
+td, th {
+    padding: 6px; 
+    text-align: left; 
+    font-size: 16px; 
+    font-weight: bold; /* Negrita */
+    text-align: center; 
+    width: 4px;
+}
+
+/* Estilo para la columna de fecha */
+td:first-child {
+    background-color:rgba(255, 0, 0, 0.849); 
+    color: #333; 
+    text-align: center; 
+}
+
+/* Estilo para las demás columnas */
+td:not(:first-child) {
+    background-color: #f5f5f5; 
+    color: #333; 
+}
+
+/* Estilo para cada fila */
+tr {
+    border-bottom: 1px solid #ddd; 
+
+}
+
+/* Estilo para el encabezado de la tabla */
+th {
+    background-color: #333;
+    color: #fff; 
+    border-bottom:rgba(255, 0, 0, 0.849); 
+    text-align: center; 
+}
+
+/* Estilo para los enlaces dentro de la tabla */
+a.tickets {
+    color: rgba(255, 0, 0, 0.849); 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.paisesca{
+  width: 3vw;
+  height: 5vh;
+}
+
+.TituloCalendar {
+  text-align: left;
+  padding: 50px;
+}
+
+.TituloCalendar h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgba(241, 21, 21, 0.863);
+}
+
+.TituloCalendar p {
+  font-size: 18px;
+  color: gray;
+}

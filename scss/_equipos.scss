@@ -1,0 +1,50 @@
+/*PAGINA HTML EQUIPOS*//*PAGINA HTML EQUIPOS*//*PAGINA HTML EQUIPOS*//*PAGINA HTML EQUIPOS*/
+
+.equipo-section {
+    background-color:rgb(255, 255, 255);
+  }
+      
+  .equipo-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    z-index: 0;
+  }
+  
+  .equipo-card {
+    display: flex;
+    width: 90%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(51, 50, 50, 0.39);
+    overflow: hidden;
+    margin: 30px;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .equipo-card img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    float: left;
+  }
+  
+  .equipo-info {
+    width: 30%;
+    padding: 10px;
+    background-color: rgba(241, 25, 25, 0.856);
+    color: #fff;
+    float: right;
+    text-align: left;
+  }
+  
+  .equipo-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .equipo-info p {
+    font-size: 16px;
+  }

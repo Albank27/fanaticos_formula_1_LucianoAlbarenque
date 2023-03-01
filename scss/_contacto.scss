@@ -1,0 +1,80 @@
+/*PAGINA HTML CONTACTO*//*PAGINA HTML CONTACTO*//*PAGINA HTML CONTACTO*//*PAGINA HTML CONTACTO*/
+
+.titulocontacto {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .titulocontacto {
+    font-size: 36px;
+    font-weight: bold;
+    color: rgba(241, 21, 21, 0.863);
+  }
+  
+  .padrepadre{
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: center; /*para centrar los elementos en el eje principal (horizontalmente)*/
+      align-items: center; /*para centrar los elementos en el eje transversal (verticalmente)*/
+      gap: 10px; /*para agregar espacio entre los elementos*/
+  }
+  
+  .formulario1, .audiospoty, .hamiltongif {
+      margin: 10px; /*agrega un margen de 10px alrededor de cada uno de los divs*/
+      z-index: 0;
+  }
+  .hamiltongif{
+      flex: 2;
+      order: 2; 
+      margin-top: -60px; /*use esto pero nose si esta bien, pero funciono. Acerca mas los div's*/
+  }
+  
+  form {
+      width: 500px;
+      margin: 20px;
+      border-radius: 10px;
+      background-color: #f5f5f5;
+      padding: 20px;
+      background-color: #333;
+      box-shadow: 10px 10px 10px #333;
+    }
+    
+    /* Estilos para los inputs */
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      font-size: 16px;
+    }
+    
+    /* Estilos para el botón Enviar */
+    input[type="submit"] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold; 
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    /* Estilos para el botón Limpiar */
+    input[type="reset"] {
+      width: 100%;
+      background-color: #f44336;
+      color: white;
+      font-weight: bold; 
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }

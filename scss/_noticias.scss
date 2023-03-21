@@ -83,3 +83,12 @@
     height: 300px;
     z-index: 0;
   }
+  .noticia {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .noticia.aparecer {
+    opacity: 1;
+    transition-delay: 0.05s;
+  }

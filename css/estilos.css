@@ -165,6 +165,9 @@ iframe {
   justify-content: center;
   border-radius: 5px; }
 
+.negrita {
+  font-weight: bold; }
+
 /*PAGINA HMTL FOOTER*/
 /*PAGINA HMTL FOOTER*/
 /*PAGINA HMTL FOOTER*/
@@ -406,6 +409,14 @@ a.tickets {
   width: 430px;
   height: 300px;
   z-index: 0; }
+
+.noticia {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; }
+
+.noticia.aparecer {
+  opacity: 1;
+  transition-delay: 0.05s; }
 
 /*PAGINA HTML PILOTOS*/
 /*PAGINA HTML PILOTOS*/

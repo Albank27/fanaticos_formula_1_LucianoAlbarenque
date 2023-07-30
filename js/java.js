@@ -1,5 +1,5 @@
-var carouselImages = document.querySelectorAll(".carousel-image");
-var currentIndex = 0;
+let carouselImages = document.querySelectorAll(".carousel-image");
+let currentIndex = 0;
 
 setInterval(function() {
   carouselImages[currentIndex].style.display = "none";

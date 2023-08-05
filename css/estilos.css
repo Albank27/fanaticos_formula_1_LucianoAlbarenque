@@ -559,12 +559,20 @@ input[type="reset"] {
 /*PAGINA CUESTIONARIO*/
 /*PAGINA CUESTIONARIO*/
 /*PAGINA CUESTIONARIO*/
+.padrecuestionario{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*para centrar los elementos en el eje principal (horizontalmente)*/
+  align-items: center;
+  /*para centrar los elementos en el eje transversal (verticalmente)*/
+  gap: 10px;
+  /*para agregar espacio entre los elementos*/ }
+
 .cuestionariojs {
-  text-align: center;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  margin-left: 20px;
-  width: 600px;
+  text-align: left;
+  margin: 20px;
+  width: 800px;
   border-radius: 10px;
   background-color: #f5f5f5;
   padding: 20px;
@@ -572,6 +580,11 @@ input[type="reset"] {
   box-shadow: 10px 10px 10px #333;
   color:#ddd;
 }
+
+.audiospoty {
+  margin: 10px;
+  /*agrega un margen de 10px alrededor de cada uno de los divs*/
+  z-index: 0; }
 
 .tituloquiz {
   font-size: 28px;

@@ -570,14 +570,13 @@ input[type="reset"] {
   /*para agregar espacio entre los elementos*/ }
 
 .cuestionariojs {
-  text-align: left;
+  text-align: center;
   margin: 20px;
   width: 800px;
   border-radius: 10px;
   background-color: #f5f5f5;
   padding: 20px;
   background-color: #333;
-  box-shadow: 10px 10px 10px #333;
   color:#ddd;
 }
 
@@ -590,7 +589,7 @@ input[type="reset"] {
   font-size: 28px;
   font-weight: bold;
   text-align: left;
-  margin-left: 20px;
+  margin-left: 85px;
   margin-top: 60px;
   color: rgba(241, 25, 25, 0.856);
 }
@@ -598,13 +597,13 @@ input[type="reset"] {
   font-size: 18px;
   font-weight: bold;
   text-align: left;
-  margin-left: 20px;
+  margin-left: 85px;
   color:#333;
 }
 
 div#main {
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 20px;  
 }
 
 div#main p {
@@ -624,6 +623,7 @@ div#main input[type="radio"] {
 div#main button {
   display: block;
   margin: 0 auto;
+  margin-top: 100px;
   padding: 12px 24px;
   font-size: 18px;
   font-weight: bold;

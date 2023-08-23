@@ -1,0 +1,108 @@
+/*PAGINA CUESTIONARIO*/
+/*PAGINA CUESTIONARIO*/
+/*PAGINA CUESTIONARIO*/
+.padrecuestionario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*para centrar los elementos en el eje principal (horizontalmente)*/
+    align-items: center;
+    /*para centrar los elementos en el eje transversal (verticalmente)*/
+    gap: 10px;
+    /*para agregar espacio entre los elementos*/ }
+  
+  .cuestionariojs {
+    text-align: center;
+    margin: 20px;
+    width: 800px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    background-color: #333;
+    color:#ddd;
+  }
+  
+  .audiospoty {
+    margin: 10px;
+    /*agrega un margen de 10px alrededor de cada uno de los divs*/
+    z-index: 0; }
+  
+  .tituloquiz {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 85px;
+    margin-top: 60px;
+    color: rgba(241, 25, 25, 0.856);
+  }
+  .tituloquiz2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 85px;
+    color:#333;
+  }
+  
+  div#main {
+    text-align: left;
+    margin-bottom: 20px;  
+  }
+  
+  div#main p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  div#main label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  div#main input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  div#main button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(241, 25, 25, 0.856);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  div#main button:hover {
+    background-color: #f8f7f7;
+    color: #f80b0b;
+  }
+  
+  /* Estilos para el mensaje de alerta */
+  .alert-message {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #fdfbfb;
+  }
+  
+  .alert-result {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  /* Estilos para los resultados */
+  .result-correct {
+    color: #00c853;
+    font-weight: bold;
+  }
+  
+  .result-wrong {
+    color: #ff0000;
+    font-weight: bold;
+  }

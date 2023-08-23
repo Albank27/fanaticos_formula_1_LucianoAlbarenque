@@ -726,6 +726,21 @@ div#main button:hover {
 
 /*Formato para cada tipo de pantalla para que el mismo sea responsive*/
 @media (max-width: 767px) {
+  .tituloquiz {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 60px;
+    color: rgba(241, 25, 25, 0.856);
+  }
+  .tituloquiz2 {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 25px;
+    color:#333;
+  }
   .cabecera {
     flex-direction: column; }
   .main {
@@ -797,7 +812,7 @@ div#main button:hover {
     height: 50px; }
   .navegacion {
     display: flex;
-    font-size: 13px; }
+    font-size: 10px; }
   .boton-whatsapp img {
     width: 8%;
     height: 4%;
@@ -977,6 +992,21 @@ div#main button:hover {
     z-index: 0; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .tituloquiz {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 60px;
+    color: rgba(241, 25, 25, 0.856);
+  }
+  .tituloquiz2 {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 25px;
+    color:#333;
+  }
   .cabecera {
     flex-direction: column; }
   .main {
@@ -1048,7 +1078,7 @@ div#main button:hover {
     height: 50px; }
   .navegacion {
     display: flex;
-    font-size: 13px; }
+    font-size: 10px; }
   .boton-whatsapp img {
     width: 8%;
     height: 4%;

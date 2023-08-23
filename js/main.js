@@ -1,4 +1,5 @@
 //questions "este array es el principal que tiene todas las preguntas y sus detalles(opciones y respuestas)"
+//funcion de orden superior = temporizador
 
 const questions = [
 {question: "¿Cuál es el piloto con más campeonatos de Fórmula 1?",
@@ -46,6 +47,7 @@ answer: "Minardi"
   let currentQuestionIndex = 0;
   let correctAnswers = 0;
   let playerName = "";
+  
   
   function showQuestion() {
     const main = document.getElementById("main");
@@ -113,36 +115,33 @@ answer: "Minardi"
     }
   }
   
-  function showResults() {
-    const main = document.getElementById("main");
-    main.innerHTML = "";
-  
-    const resultMessage = document.createElement("div");
-    resultMessage.classList.add("alert-message");
-  
-    if (correctAnswers >= 8) {
-      resultMessage.textContent = "¡Felicidades! Eres un experto en Fórmula 1";
-    } else if (correctAnswers >= 5) {
-      resultMessage.textContent = "Mmm, conoces algo de Fórmula 1";
-    } else {
-      resultMessage.textContent = "Patetico,no sabes de Fórmula 1";
-    }
-    const scoreMessage = document.createElement("div");
-    scoreMessage.classList.add("alert-result");
-    scoreMessage.innerHTML = `Respuestas correctas: <span class="result-correct">${correctAnswers}</span>/10`;
-  
-    main.appendChild(resultMessage);
-    main.appendChild(scoreMessage);
-  
-    // Ya mostre el resultado,ahora doy la opcion de mostrar el ranking
-    const showRankingButton = document.createElement("button");
-    showRankingButton.innerText = "Ver Ranking";
-    showRankingButton.onclick = function () {
-      main.innerHTML = ""; 
-      showRanking(); 
-    };
-  
-    main.appendChild(showRankingButton);
+  function temporizador(func, delay) {
+        setTimeout(func, delay);
+      }
+
+        function showResults() {
+        const main = document.getElementById("main");
+        main.innerHTML = "";
+      
+        const resultMessage = document.createElement("div");
+        resultMessage.classList.add("alert-message");
+      
+        if (correctAnswers >= 8) {
+          resultMessage.textContent = "¡Felicidades! Eres un experto en Fórmula 1";
+        } else if (correctAnswers >= 5) {
+          resultMessage.textContent = "Mmm, conoces algo de Fórmula 1";
+        } else {
+          resultMessage.textContent = "Patetico, no sabes de Fórmula 1";
+        }
+        const scoreMessage = document.createElement("div");
+        scoreMessage.classList.add("alert-result");
+        scoreMessage.innerHTML = `Respuestas correctas: <span class="result-correct">${correctAnswers}</span>/10`;
+      
+        main.appendChild(resultMessage);
+        main.appendChild(scoreMessage);
+      
+        // Llamar a la función de orden superior para mostrar el ranking después de 3 segundos
+        temporizador(showRanking, 3000);
   }
   
   function showRanking() {

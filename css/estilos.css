@@ -1231,8 +1231,7 @@ div#main button:hover {
     grid-column: 1 / 2;
     width: 350px;
     height: 300px;
-    z-index: 0; } 
-  }
+    z-index: 0; } }
 
 @media (min-width: 992px) {
   .cabecera {

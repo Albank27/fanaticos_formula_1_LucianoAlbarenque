@@ -120,29 +120,33 @@ answer: "Minardi"
       }
 
         function showResults() {
-        const main = document.getElementById("main");
-        main.innerHTML = "";
-      
-        const resultMessage = document.createElement("div");
-        resultMessage.classList.add("alert-message");
-      
-        if (correctAnswers >= 8) {
-          resultMessage.textContent = "¡Felicidades! Eres un experto en Fórmula 1";
-        } else if (correctAnswers >= 5) {
-          resultMessage.textContent = "Mmm, conoces algo de Fórmula 1";
-        } else {
-          resultMessage.textContent = "Patetico, no sabes de Fórmula 1";
-        }
-        const scoreMessage = document.createElement("div");
-        scoreMessage.classList.add("alert-result");
-        scoreMessage.innerHTML = `Respuestas correctas: <span class="result-correct">${correctAnswers}</span>/10`;
-      
-        main.appendChild(resultMessage);
-        main.appendChild(scoreMessage);
-      
-        // Llamar a la función de orden superior para mostrar el ranking después de 3 segundos
-        temporizador(showRanking, 3000);
+  const main = document.getElementById("main");
+  main.innerHTML = "";
+
+  const resultMessage = document.createElement("div");
+  resultMessage.classList.add("alert-message");
+
+  if (correctAnswers >= 8) {
+    resultMessage.textContent = "¡Felicidades! Eres un experto en Fórmula 1";
+
+    // Mostrar la imagen si se cumple la condición
+    const resultadoImagen = document.getElementById("resultadoImagen");
+    resultadoImagen.style.display = "block";
+  } else if (correctAnswers >= 5) {
+    resultMessage.textContent = "Mmm, conoces algo de Fórmula 1";
+  } else {
+    resultMessage.textContent = "Patético, no sabes de Fórmula 1";
   }
+  const scoreMessage = document.createElement("div");
+  scoreMessage.classList.add("alert-result");
+  scoreMessage.innerHTML = `Respuestas correctas: <span class="result-correct">${correctAnswers}</span>/10`;
+
+  main.appendChild(resultMessage);
+  main.appendChild(scoreMessage);
+
+  // Llamar a la función de orden superior para mostrar el ranking después de 3 segundos
+  temporizador(showRanking, 3000);
+}
   
   function showRanking() {
     const main = document.getElementById("main");

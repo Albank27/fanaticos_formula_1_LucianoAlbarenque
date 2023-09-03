@@ -59,7 +59,10 @@ let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let playerName = "";
 let playerEmail = "";
-let playerEdad = ""
+let playerEdad = "";
+
+// Variable para almacenar las respuestas del usuario
+const userAnswers = [];
 
 function showQuestion() {
   const main = document.getElementById("main");
@@ -88,7 +91,7 @@ function showQuestion() {
       playerEdad = document.getElementById("edad").value;
       playerEmail = document.getElementById("email").value;
       if (!playerName || !playerEmail || !playerEdad) {
-        alert("Por favor, ingresa tu nombre,edad y correo electrónico antes de comenzar el cuestionario");
+        alert("Por favor, ingresa tu nombre, edad y correo electrónico antes de comenzar el cuestionario");
       } else {
         playerNameInput.style.display = "none";
         playerEdadInput.style.display = "none";
@@ -124,6 +127,7 @@ function showQuestion() {
       const selectedAnswer = document.querySelector('input[name="options"]:checked');
       if (selectedAnswer) {
         const userAnswer = selectedAnswer.value;
+        userAnswers[currentQuestionIndex] = userAnswer; // Almacena la respuesta del usuario
         if (userAnswer === question.answer) {
           correctAnswers++;
         }
@@ -154,9 +158,6 @@ function showResults() {
 
   if (correctAnswers >= 8) {
     resultMessage.textContent = "¡Felicidades! Eres un experto en Fórmula 1";
-
-    const resultadoImagen = document.getElementById("resultadoImagen");
-    resultadoImagen.style.display = "block";
   } else if (correctAnswers >= 5) {
     resultMessage.textContent = "Mmm, conoces algo de Fórmula 1";
   } else {
@@ -166,10 +167,63 @@ function showResults() {
   scoreMessage.classList.add("alert-result");
   scoreMessage.innerHTML = `Respuestas correctas: <span class="result-correct">${correctAnswers}</span>/10`;
 
+  const buttonContainer = document.createElement("div");
+
+  const viewRankingButton = document.createElement("button");
+  viewRankingButton.innerText = "Ver Ranking";
+  viewRankingButton.onclick = showRanking;
+
+  const viewAnswersButton = document.createElement("button");
+  viewAnswersButton.innerText = "Ver Respuestas";
+  viewAnswersButton.onclick = showAnswers;
+
+  const restartButton = document.createElement("button");
+  restartButton.innerText = "Reiniciar";
+  restartButton.onclick = function () {
+    location.reload(); // Recargar la página
+  };
+
+  buttonContainer.style.display = "flex";
+  buttonContainer.style.justifyContent = "space-between";
+  buttonContainer.style.marginTop = "10px";
+
+  buttonContainer.appendChild(viewRankingButton);
+  buttonContainer.appendChild(viewAnswersButton);
+  buttonContainer.appendChild(restartButton);
+
   main.appendChild(resultMessage);
   main.appendChild(scoreMessage);
+  main.appendChild(buttonContainer);
+}
 
-  temporizador(showRanking, 3000);
+function showAnswers() {
+  const main = document.getElementById("main");
+  main.innerHTML = "";
+
+  for (let i = 0; i < questions.length; i++) {
+    const question = questions[i];
+
+    const questionDiv = document.createElement("div");
+    questionDiv.innerHTML = `<p>${question.question}</p>`;
+    main.appendChild(questionDiv);
+
+    const userAnswerDiv = document.createElement("div");
+    const userAnswer = userAnswers[i];
+    userAnswerDiv.textContent = `Tu respuesta: ${userAnswer ? userAnswer : "No respondida"}`;
+    main.appendChild(userAnswerDiv);
+
+    const correctAnswerDiv = document.createElement("div");
+    correctAnswerDiv.textContent = `Respuesta correcta: ${question.answer}`;
+    main.appendChild(correctAnswerDiv);
+
+    main.appendChild(document.createElement("hr"));
+  }
+
+  // Agregar botón "Atrás"
+  const backButton = document.createElement("button");
+  backButton.innerText = "Atrás";
+  backButton.onclick = showResults;
+  main.appendChild(backButton);
 }
 
 function showRanking() {
@@ -178,7 +232,7 @@ function showRanking() {
 
   let rankingData = JSON.parse(localStorage.getItem("rankingData")) || [];
 
-  rankingData.push({ playerName,playerEdad, playerEmail, score: correctAnswers });
+  rankingData.push({ playerName, playerEdad, playerEmail, score: correctAnswers });
 
   rankingData.sort((a, b) => b.score - a.score);
 
@@ -228,6 +282,12 @@ function showRanking() {
 
   table.appendChild(tableBody);
   main.appendChild(table);
+
+  // Agregar botón "Atrás"
+  const backButton = document.createElement("button");
+  backButton.innerText = "Atrás";
+  backButton.onclick = showResults;
+  main.appendChild(backButton);
 }
 
 showQuestion();

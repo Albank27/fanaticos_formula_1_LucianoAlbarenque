@@ -1,8 +1,4 @@
-//questions "este array es el principal que tiene todas las preguntas y sus detalles(opciones y respuestas)"
-//funcion de orden superior = temporizador
-//Agrego storage y json para guardarme los nombre y mail de los partipantes para visualizar su puntaje en el ranking
-
-const questions = [
+const allQuestions = [
   {
     question: "¿Cuál es el piloto con más campeonatos de Fórmula 1?",
     options: ["Lewis Hamilton", "Michael Schumacher", "Juan Manuel Fangio"],
@@ -39,21 +35,74 @@ const questions = [
     answer: "Abu Dhabi",
   },
   {
-    question: "¿Qué piloto ganó el primer campeonato de Fórmula 1 en la historia?",
-    options: ["Fangio", "Ascari", "Farina"],
-    answer: "Farina",
+    question: "¿Cuál es el país de origen del piloto de Fórmula 1 Lando Norris?",
+    options: ["Reino Unido", "Estados Unidos", "Australia"],
+    answer: "Reino Unido",
   },
   {
-    question: "¿Cuántos Grandes Premios ha ganado Sebastian Vettel en su carrera?",
-    options: ["48", "53", "56"],
-    answer: "53",
+    question: "¿Cuántos equipos compiten en la Fórmula 1 en la temporada 2023?",
+    options: ["8 equipos", "10 equipos", "12 equipos"],
+    answer: "10 equipos",
   },
   {
-    question: "¿En qué equipo debutó Fernando Alonso en la Fórmula 1?",
-    options: ["Minardi", "Ferrari", "McLaren"],
-    answer: "Minardi",
+    question: "¿Quién es el piloto con más pole positions en la historia de la Fórmula 1?",
+    options: ["Lewis Hamilton", "Ayrton Senna", "Michael Schumacher"],
+    answer: "Lewis Hamilton",
+  },
+  {
+    question: "¿Cuál es el equipo más antiguo que todavía compite en la Fórmula 1?",
+    options: ["Ferrari", "Williams", "McLaren"],
+    answer: "McLaren",
+  },
+  {
+    question: "¿En qué año se celebró el primer Campeonato Mundial de Fórmula 1?",
+    options: ["1950", "1947", "1952"],
+    answer: "1950",
+  },
+  {
+    question: "¿Cuál es el país natal del piloto de Fórmula 1 Daniel Ricciardo?",
+    options: ["Australia", "Canadá", "Italia"],
+    answer: "Australia",
+  },
+  {
+    question: "¿En qué circuito se celebra el Gran Premio de Italia?",
+    options: ["Monza", "Imola", "Mugello"],
+    answer: "Monza",
+  },
+  {
+    question: "¿Cuál es el país de origen de la escudería Red Bull Racing?",
+    options: ["Reino Unido", "Austria", "Italia"],
+    answer: "Austria",
+  },
+  {
+    question: "¿Cuántas carreras se disputan en una temporada de Fórmula 1 en promedio?",
+    options: ["18", "20", "22"],
+    answer: "20",
+  },
+  {
+    question: "¿Cuál es el piloto más joven en ganar un Gran Premio de Fórmula 1?",
+    options: ["Max Verstappen", "Sebastian Vettel", "Charles Leclerc"],
+    answer: "Max Verstappen",
+  },
+  {
+    question: "¿Cuántos puntos se otorgan al piloto que logra la vuelta más rápida en una carrera de Fórmula 1?",
+    options: ["1 punto", "2 puntos", "3 puntos"],
+    answer: "1 punto",
   },
 ];
+
+function selectRandomQuestions(allQuestions, count) {
+  const selectedQuestions = [];
+  const shuffledQuestions = [...allQuestions]; 
+  for (let i = 0; i < count; i++) {
+    const randomIndex = Math.floor(Math.random() * shuffledQuestions.length);
+    const randomQuestion = shuffledQuestions.splice(randomIndex, 1)[0]; 
+    selectedQuestions.push(randomQuestion);
+  }
+  return selectedQuestions;
+}
+
+const selectedQuestions = selectRandomQuestions(allQuestions, 10); 
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
@@ -106,7 +155,7 @@ function showQuestion() {
     main.appendChild(playerEmailInput);
     main.appendChild(startButton);
   } else {
-    const question = questions[currentQuestionIndex];
+    const question = selectedQuestions[currentQuestionIndex]; 
     const questionDiv = document.createElement("div");
     questionDiv.innerHTML = `<p>${question.question}</p>`;
 
@@ -127,12 +176,12 @@ function showQuestion() {
       const selectedAnswer = document.querySelector('input[name="options"]:checked');
       if (selectedAnswer) {
         const userAnswer = selectedAnswer.value;
-        userAnswers[currentQuestionIndex] = userAnswer; // Almacena la respuesta del usuario
+        userAnswers[currentQuestionIndex] = userAnswer; 
         if (userAnswer === question.answer) {
           correctAnswers++;
         }
         currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
+        if (currentQuestionIndex < selectedQuestions.length) { 
           showQuestion();
         } else {
           showResults();
@@ -143,10 +192,6 @@ function showQuestion() {
     main.appendChild(questionDiv);
     main.appendChild(submitButton);
   }
-}
-
-function temporizador(func, delay) {
-  setTimeout(func, delay);
 }
 
 function showResults() {
@@ -180,7 +225,7 @@ function showResults() {
   const restartButton = document.createElement("button");
   restartButton.innerText = "Reiniciar";
   restartButton.onclick = function () {
-    location.reload(); // Recargar la página
+    location.reload(); 
   };
 
   buttonContainer.style.display = "flex";
@@ -200,8 +245,8 @@ function showAnswers() {
   const main = document.getElementById("main");
   main.innerHTML = "";
 
-  for (let i = 0; i < questions.length; i++) {
-    const question = questions[i];
+  for (let i = 0; i < selectedQuestions.length; i++) { 
+    const question = selectedQuestions[i]; 
 
     const questionDiv = document.createElement("div");
     questionDiv.innerHTML = `<p>${question.question}</p>`;
@@ -219,7 +264,6 @@ function showAnswers() {
     main.appendChild(document.createElement("hr"));
   }
 
-  // Agregar botón "Atrás"
   const backButton = document.createElement("button");
   backButton.innerText = "Atrás";
   backButton.onclick = showResults;
@@ -283,7 +327,6 @@ function showRanking() {
   table.appendChild(tableBody);
   main.appendChild(table);
 
-  // Agregar botón "Atrás"
   const backButton = document.createElement("button");
   backButton.innerText = "Atrás";
   backButton.onclick = showResults;

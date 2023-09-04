@@ -110,7 +110,6 @@ let playerName = "";
 let playerEmail = "";
 let playerEdad = "";
 
-// Variable para almacenar las respuestas del usuario
 const userAnswers = [];
 
 function showQuestion() {
@@ -126,7 +125,7 @@ function showQuestion() {
     const playerEdadInput = document.createElement("input");
     playerEdadInput.type = "text";
     playerEdadInput.id = "edad";
-    playerEdadInput.placeholder = "Ingresa tu edad";
+    playerEdadInput.placeholder = "Ingresa tu edad"; 
 
     const playerEmailInput = document.createElement("input");
     playerEmailInput.type = "email";
@@ -139,8 +138,9 @@ function showQuestion() {
       playerName = document.getElementById("nombre").value;
       playerEdad = document.getElementById("edad").value;
       playerEmail = document.getElementById("email").value;
-      if (!playerName || !playerEmail || !playerEdad) {
-        alert("Por favor, ingresa tu nombre, edad y correo electrónico antes de comenzar el cuestionario");
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; 
+      if (!playerName || !playerEmail || !playerEdad || isNaN(playerEdad) || playerEdad < 4 || playerEdad > 100 || !emailPattern.test(playerEmail)) {
+        alert("Por favor, ingresa tu nombre, una edad válida (entre 4 y 100) y un correo electrónico válido antes de comenzar el cuestionario");
       } else {
         playerNameInput.style.display = "none";
         playerEdadInput.style.display = "none";

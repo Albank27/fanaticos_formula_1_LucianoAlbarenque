@@ -140,7 +140,11 @@ function showQuestion() {
       playerEmail = document.getElementById("email").value;
       const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; 
       if (!playerName || !playerEmail || !playerEdad || isNaN(playerEdad) || playerEdad < 4 || playerEdad > 100 || !emailPattern.test(playerEmail)) {
-        alert("Por favor, ingresa tu nombre, una edad válida (entre 4 y 100) y un correo electrónico válido antes de comenzar el cuestionario");
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          html: '<p>Por favor, ingresa lo siguiente:</p><ul><li>Un nombre valido</li><li>Una edad válida (entre 4 y 100)</li><li>Un correo electrónico válido</li></ul>',
+        });
       } else {
         playerNameInput.style.display = "none";
         playerEdadInput.style.display = "none";

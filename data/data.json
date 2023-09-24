@@ -1,0 +1,204 @@
+[
+    {
+       "question":"¿Cuál es el piloto con más campeonatos de Fórmula 1?",
+       "options":[
+          "Lewis Hamilton",
+          "Michael Schumacher",
+          "Juan Manuel Fangio"
+       ],
+       "answer":"Michael Schumacher"
+    },
+    {
+       "question":"¿Qué equipo ha ganado más campeonatos de constructores?",
+       "options":[
+          "Ferrari",
+          "Mercedes",
+          "McLaren"
+       ],
+       "answer":"Ferrari"
+    },
+    {
+       "question":"¿En qué país se corre el Gran Premio de Mónaco?",
+       "options":[
+          "Italia",
+          "España",
+          "Mónaco"
+       ],
+       "answer":"Mónaco"
+    },
+    {
+       "question":"¿Qué piloto es conocido como 'The Flying Finn'?",
+       "options":[
+          "Kimi Räikkönen",
+          "Valtteri Bottas",
+          "Max Verstappen"
+       ],
+       "answer":"Kimi Räikkönen"
+    },
+    {
+       "question":"¿Cuántos títulos mundiales ha ganado Ayrton Senna?",
+       "options":[
+          "2",
+          "3",
+          "4"
+       ],
+       "answer":"3"
+    },
+    {
+       "question":"¿Cuál es el circuito más largo del calendario de Fórmula 1?",
+       "options":[
+          "Monza",
+          "Spa-Francorchamps",
+          "Silverstone"
+       ],
+       "answer":"Spa-Francorchamps"
+    },
+    {
+       "question":"¿En qué ciudad se encuentra el circuito de Yas Marina?",
+       "options":[
+          "Dubai",
+          "Abu Dhabi",
+          "Doha"
+       ],
+       "answer":"Abu Dhabi"
+    },
+    {
+       "question":"¿Cuál es el país de origen del piloto de Fórmula 1 Lando Norris?",
+       "options":[
+          "Reino Unido",
+          "Estados Unidos",
+          "Australia"
+       ],
+       "answer":"Reino Unido"
+    },
+    {
+       "question":"¿Cuántos equipos compiten en la Fórmula 1 en la temporada 2023?",
+       "options":[
+          "8 equipos",
+          "10 equipos",
+          "12 equipos"
+       ],
+       "answer":"10 equipos"
+    },
+    {
+       "question":"¿Quién es el piloto con más pole positions en la historia de la Fórmula 1?",
+       "options":[
+          "Lewis Hamilton",
+          "Ayrton Senna",
+          "Michael Schumacher"
+       ],
+       "answer":"Lewis Hamilton"
+    },
+    {
+       "question":"¿Cuál es el equipo más antiguo que todavía compite en la Fórmula 1?",
+       "options":[
+          "Ferrari",
+          "Williams",
+          "McLaren"
+       ],
+       "answer":"McLaren"
+    },
+    {
+       "question":"¿En qué año se celebró el primer Campeonato Mundial de Fórmula 1?",
+       "options":[
+          "1950",
+          "1947",
+          "1952"
+       ],
+       "answer":"1950"
+    },
+    {
+       "question":"¿Cuál es el país natal del piloto de Fórmula 1 Daniel Ricciardo?",
+       "options":[
+          "Australia",
+          "Canadá",
+          "Italia"
+       ],
+       "answer":"Australia"
+    },
+    {
+       "question":"¿En qué circuito se celebra el Gran Premio de Italia?",
+       "options":[
+          "Monza",
+          "Imola",
+          "Mugello"
+       ],
+       "answer":"Monza"
+    },
+    {
+       "question":"¿Cuál es el país de origen de la escudería Red Bull Racing?",
+       "options":[
+          "Reino Unido",
+          "Austria",
+          "Italia"
+       ],
+       "answer":"Austria"
+    },
+    {
+       "question":"¿Cuántas carreras se disputan en una temporada de Fórmula 1 en promedio?",
+       "options":[
+          "18",
+          "20",
+          "22"
+       ],
+       "answer":"20"
+    },
+    {
+       "question":"¿Cuál es el piloto más joven en ganar un Gran Premio de Fórmula 1?",
+       "options":[
+          "Max Verstappen",
+          "Sebastian Vettel",
+          "Charles Leclerc"
+       ],
+       "answer":"Max Verstappen"
+    },
+    {
+       "question":"¿Cuántos puntos se otorgan al piloto que logra la vuelta más rápida en una carrera de Fórmula 1?",
+       "options":[
+          "1 punto",
+          "2 puntos",
+          "3 puntos"
+       ],
+       "answer":"1 punto"
+    },
+    {
+       "question":"¿Cuál es el nombre del piloto considerado el 'Rey de la Lluvia' por su habilidad en condiciones de lluvia?",
+       "options":[
+          "Ayrton Senna",
+          "Sebastian Vettel",
+          "Nigel Mansell",
+          "Fernando Alonso"
+       ],
+       "answer":"Ayrton Senna"
+    },
+    {
+       "question":"¿Cuál es el equipo de Fórmula 1 asociado a la marca de automóviles Aston Martin?",
+       "options":[
+          "Alpine F1 Team",
+          "Haas F1 Team",
+          "Aston Martin Cognizant Formula One Team",
+          "AlphaTauri"
+       ],
+       "answer":"Aston Martin Cognizant Formula One Team"
+    },
+    {
+       "question":"¿Cuál es el piloto más joven en ganar una carrera de Fórmula 1?",
+       "options":[
+          "Sebastian Vettel",
+          "Max Verstappen",
+          "Charles Leclerc",
+          "Lando Norris"
+       ],
+       "answer":"Max Verstappen"
+    },
+    {
+       "question":"¿En qué país se encuentra el circuito de Spa-Francorchamps, que es famoso por su carrera de Fórmula 1?",
+       "options":[
+          "Bélgica",
+          "Francia",
+          "Italia",
+          "Alemania"
+       ],
+       "answer":"Bélgica"
+    }
+ ]
